@@ -22,5 +22,39 @@ $(function() {
   /*  Tooltips
   /*-----------------------------------------------------------------------------------*/
   $('.tooltip-side-nav').tooltip();
-  
+
 });
+
+function validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+
+function subscribe(){
+  
+  email = $('#subscriberEmail').val();
+  valid = validateEmail(email);
+
+  if(valid){
+    response = "";
+    $.ajax({
+        url: "https://docs.google.com/forms/d/1esSf9NagqT2hD6nwXhf4kvSqZikWD4h_nD4lRFgchAA/formResponse",
+        data: { "entry_639244297": email },
+        type: "POST",
+        dataType: "xml",
+        statusCode: {
+            0: function () {
+                response = 0;
+            },
+            200: function () {
+                response = 200;
+            }
+        }
+    });
+
+    $('#subscription-status').html(response);
+  } else {
+    $('#subscription-status').html('-.- that is not your email address, is it?');
+  }
+}
+  

@@ -251,19 +251,19 @@
 
               <div class="col-md-6 col-md-offset-3 col-subscribe">
 
-                <form class="subscribe-form form-inline" action="./index.html" role="form">
+                <form class="subscribe-form form-inline" action="javascript:void(0);">
 
                   <!-- Input -->
                   <div class="form-group">
 
                     <label class="sr-only" for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email address">
+                    <input type="text" class="form-control" id="subscriberEmail" placeholder="Enter email address">
                     <!-- TODO link to google form -->
 
                   </div> <!-- /.form-group -->
 
                   <!-- Button -->
-                  <button class="btn btn-success" type="submit">Subscribe</button>
+                  <button class="btn btn-success" type="submit" onclick="subscribe();">Subscribe</button>
                   
                 </form> <!-- /.subscribe-form -->
 
@@ -271,7 +271,7 @@
 
                 <section class="subscribe-description">
 
-                  <p></p>
+                  <p id="subscription-status"></p>
                   
                 </section> <!-- /.subscribe-description -->
                 
