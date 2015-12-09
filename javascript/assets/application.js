@@ -44,15 +44,15 @@ function subscribe(){
         dataType: "xml",
         statusCode: {
             0: function () {
-                response = 0;
+                response = 0;  //cannot see response because of CORS stuff that I cannot set on github.io page
             },
             200: function () {
-                response = 200;
+                response = 200; // -- || --
             }
         }
     });
 
-    $('#subscription-status').html(response);
+    $('#subscription-status').html('Thank you for your interest!'); //nevermind assume it's okay
   } else {
     $('#subscription-status').html('-.- that is not your email address, is it?');
   }
