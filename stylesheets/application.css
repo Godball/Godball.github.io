@@ -5947,7 +5947,7 @@ tbody.collapse.in {
 .services-section {
   background: white;
   text-align: center;
-  padding: 100px 0;
+  padding: 50px 0 50px;
 }
 .services-section .row.row-padding {
   padding-top: 40px;
@@ -6266,4 +6266,8 @@ tbody.collapse.in {
   padding-top: 230px;
   text-align: center;
   margin-bottom: 50px;
+}
+
+.subscribeforupdates {
+  text-align: center;
 }
