@@ -6262,14 +6262,20 @@ tbody.collapse.in {
 }
 
 .yt-video {
-  height: 500px;
   width: 100%;
-  background-color: red;
-  font-weight: 400;
-  font-size: 40px;
-  padding-top: 230px;
-  text-align: center;
-  margin-bottom: 50px;
+  height: 530px;
+}
+
+@media screen and (max-width: 800px) {
+  .yt-video {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .yt-video {
+    height: 200px;
+  }
 }
 
 .subscribeforupdates {
