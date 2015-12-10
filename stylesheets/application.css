@@ -6257,6 +6257,10 @@ tbody.collapse.in {
 }
 
 /**************************************************************/
+.intro {
+  font-weight: 800;
+}
+
 .yt-video {
   height: 500px;
   width: 100%;
@@ -6270,4 +6274,12 @@ tbody.collapse.in {
 
 .subscribeforupdates {
   text-align: center;
+}
+
+.showscr {
+  width:100%;
+}
+
+.cnt-mid {
+  margin-top: 58px;
 }
